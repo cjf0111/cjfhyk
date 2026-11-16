@@ -1,0 +1,59 @@
+①注册github账号
+②安装git，检查ssh是否存在
+③ssh-keygen -t ed25519 -C "your_email@example.com" 生成密钥对 连续三次回车即可，记住路径在哪里
+④完整复制公钥文本登录 GitHub，点击右上角头像 Settings左侧导航栏 SSH and GPG keys点击绿色按钮 New SSH key 
+# PowerShell / Git Bash 通用：
+cat ~/.ssh/id_ed25519.pub
+⑤ssh -T git@github.com 连通测试
+⑥github建立空白仓库New repository
+⑦在项目目录打开bash
+⑧新建.gitignore
+⑨
+# 过滤 Arduino 编译产物
+build/
+*.hex
+*.elf
+*.bin
+*.map
+*.o
+
+# 过滤操作系统缩略图
+.DS_Store
+Thumbs.db
+⑩
+# 1. 初始化本地 Git 仓库
+git init
+
+# 2. 将源码与 .gitignore 提交至暂存区
+git add .
+
+# 3. 提交历史快照并写明修改信息
+git commit -m "feat: initial commit for Arduino project"
+
+# 1. 统一主分支名称为 main
+git branch -M main
+
+# 2. 关联远端 SSH 地址（替换为你刚复制的真实地址（SSH的））
+git remote add origin git@github.com:你的用户名/arduino-blink-demo.git
+
+# 3. 首次推送并建立本地与远端分支追踪
+git push -u origin main
+
+
+
+# 1. 收集所有变动文件
+git add .
+
+# 2. 打包本地快照并记录修改目的
+git commit -m "修复传感器采样超时 Bug，添加串口打印"
+
+# 3. 一键推送到云端
+git push
+
+
+
+git config --global user.name "CRgeF"
+git config --global user.email "chenruofei26@163.com"
+
+
+git remote add origin git@github.com:CRgeF/DHT11_TEST_1_V1.git
