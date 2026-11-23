@@ -83,4 +83,7 @@ Arduino IDE 中「工具 → 管理库」安装，或「项目 → 加载库 →
 
 ## 提交与远端
 
-远端仓库：`git@github.com:CRgeF/DHT11_TEST_1_V1.git`（分支 `main`）。SSH 走 `ssh.github.com:443`，已在本机 `~/.ssh/config` 配置好。
+- `origin`：`git@github.com:cjf0111/cjfhyk.git`（分支 `main`，本仓库正式存放地址）
+- `upstream`：`git@github.com:CRgeF/DHT11_TEST_1_V1.git`（课程原仓库，只有读权限，留作参考）
+
+SSH 走 `ssh.github.com:443`，已在本机 `~/.ssh/config` 配置好。
